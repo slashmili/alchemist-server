@@ -9,9 +9,7 @@ defmodule Alchemist.API.PingTest do
   alias Alchemist.API.Ping
 
   test "PING request" do
-    assert capture_io(fn ->
-      Ping.process(Process.group_leader)
-    end) =~ """
+    assert Ping.process =~ """
     PONG
     END-OF-PING
     """

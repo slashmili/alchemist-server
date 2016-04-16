@@ -36,7 +36,7 @@ defmodule Alchemist.Helpers.ProcessCommands do
       ["DEFL", args] ->
         API.Defl.request(args, device)
       ["PING"] ->
-        API.Ping.request(device)
+        API.Ping.request
       _ ->
         nil
     end
